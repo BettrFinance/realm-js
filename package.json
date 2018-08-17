@@ -76,7 +76,7 @@
     "react-tests-android": "node scripts/react-tests-android.js || npm run postreact-tests-android",
     "postreact-tests-android": "npm run win-revert-symlinks",
     "check-environment": "node scripts/check-environment.js",
-    "postinstall": "grep url .gitmodules | sed 's/.*= //' | while read url; do git clone $url; done"
+    "postinstall": "git pull --recurse-submodules"
   },
   "dependencies": {
     "command-line-args": "^4.0.6",
